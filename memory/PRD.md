@@ -44,3 +44,4 @@
 - Replace any placeholder business messaging with finalized company-approved copy
 - Add domain-specific branding assets such as favicon and social preview image
 - Decide whether to keep email-only inquiries or add a formal consultation form later
+- Cloudflare Pages deployment is prepared with static SPA routing support via `frontend/public/_redirects`
