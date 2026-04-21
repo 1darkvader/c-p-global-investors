@@ -5,11 +5,12 @@ const consultingImage = 'https://images.pexels.com/photos/3183150/pexels-photo-3
 const consultationMailto = 'mailto:info@cpglobalinvestors.capital?subject=Book%20a%20Consultation';
 const phoneDisplay = '805-253-2887';
 const phoneHref = 'tel:+18052532887';
+const siteUrl = 'https://cpglobalinvestors.capital';
 
 const sitePages = {
   '/': {
-    title: 'Premier Investment Consulting',
-    description: 'C&P Global Investors helps clients move with clarity across investment decisions, financial strategy, and business planning.',
+    title: 'Financial Consulting, Risk Management & Capital Advisory',
+    description: 'C&P Global Investors is a dedicated financial consulting firm specializing in strategic planning, risk management, financial restructuring, wealth management, and capital advisory services.',
     content: `
       <section class="hero">
         <div class="container">
@@ -113,8 +114,8 @@ const sitePages = {
     `,
   },
   '/services': {
-    title: 'Services',
-    description: 'Explore investment consulting, financial strategy, and business advisory services built around practical, informed guidance.',
+    title: 'Financial Consulting Services',
+    description: 'Explore C&P Global Investors services in strategic planning, risk management, financial restructuring, wealth management, and capital advisory.',
     content: `
       <section class="page-header">
         <div class="container story-grid">
@@ -189,8 +190,8 @@ const sitePages = {
     `,
   },
   '/about': {
-    title: 'About',
-    description: 'Learn about the values and positioning behind C&P Global Investors.',
+    title: 'About C&P Global Investors',
+    description: 'Learn about C&P Global Investors, a financial consulting firm focused on strategic planning, wealth management, and long-term financial guidance.',
     content: `
       <section class="page-header">
         <div class="container story-grid">
@@ -252,8 +253,8 @@ const sitePages = {
     `,
   },
   '/contact': {
-    title: 'Contact',
-    description: 'Reach C&P Global Investors by email and location details in Fresno, California.',
+    title: 'Contact C&P Global Investors',
+    description: 'Contact C&P Global Investors for financial consulting, wealth management support, capital advisory, and strategic planning services.',
     content: `
       <section class="page-header">
         <div class="container page-layout-gap reveal" data-testid="contact-header-block">
@@ -296,8 +297,8 @@ const sitePages = {
     `,
   },
   '/book': {
-    title: 'Book Consultation',
-    description: 'Start a consultation request with C&P Global Investors.',
+    title: 'Schedule a Consultation',
+    description: 'Schedule a consultation with C&P Global Investors for strategic planning, risk management, financial restructuring, and capital advisory.',
     content: `
       <section class="page-header">
         <div class="container book-grid">
@@ -360,9 +361,32 @@ const sitePages = {
   },
 };
 
+const updateSeo = (path, page) => {
+  const cleanPath = path === '/' ? '/' : path.replace(/\/$/, '');
+  const canonicalUrl = `${siteUrl}${cleanPath}`;
+  const fullTitle = `${page.title} | C&P Global Investors`;
+
+  document.title = fullTitle;
+
+  const setMeta = (selector, attribute, value) => {
+    const element = document.querySelector(selector);
+    if (element) {
+      element.setAttribute(attribute, value);
+    }
+  };
+
+  setMeta('#meta-description', 'content', page.description);
+  setMeta('#og-title', 'content', fullTitle);
+  setMeta('#og-description', 'content', page.description);
+  setMeta('#og-url', 'content', canonicalUrl);
+  setMeta('#twitter-title', 'content', fullTitle);
+  setMeta('#twitter-description', 'content', page.description);
+  setMeta('#canonical-link', 'href', canonicalUrl);
+};
+
 const renderLayout = (path) => {
   const page = sitePages[path] || sitePages['/'];
-  document.title = `C&P Global Investors | ${page.title}`;
+  updateSeo(path, page);
 
   const app = document.getElementById('app');
   app.innerHTML = `

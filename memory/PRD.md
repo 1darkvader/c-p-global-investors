@@ -45,3 +45,4 @@
 - Add domain-specific branding assets such as favicon and social preview image
 - Decide whether to keep email-only inquiries or add a formal consultation form later
 - Cloudflare Pages deployment is prepared with static SPA routing support via `frontend/public/_redirects`
+- Core SEO assets are added: robots.txt, sitemap.xml, structured data, canonical links, and page-specific metadata updates
