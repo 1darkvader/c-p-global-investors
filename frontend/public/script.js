@@ -20,8 +20,8 @@ const sitePages = {
                 <span data-testid="home-hero-badge-text">Wealth management and capital advisory</span>
               </div>
               <div class="eyebrow" data-testid="home-hero-eyebrow">Trusted guidance</div>
-              <h1 data-testid="home-hero-heading">Strategic capital advice for thoughtful growth.</h1>
-              <p data-testid="home-hero-description">We support investors, business owners, and decision-makers with measured, professional consulting designed to sharpen direction, strengthen planning, and support long-term value creation.</p>
+              <h1 data-testid="home-hero-heading">A dedicated financial consulting firm specializing in strategic planning, risk management, &amp; financial restructuring.</h1>
+              <p data-testid="home-hero-description">Our mission is to provide comprehensive advisory services that help our clients navigate complex financial landscapes and achieve sustainable growth. We support investors, Individuals, business owners, Corporate entities with measured, professional consulting designed to sharpen direction, strengthen planning, and support long-term value creation.</p>
               <div class="hero-actions">
                 <a class="button" href="/book" data-testid="home-hero-book-button">Book Consultation</a>
                 <a class="button-outline" href="/services" data-testid="home-hero-services-button">Explore Services</a>
@@ -383,7 +383,6 @@ const renderLayout = (path) => {
             </div>
             <div class="brand-copy" data-testid="header-brand-copy">
               <strong data-testid="header-brand-name">C&amp;P Global Investors</strong>
-              <span data-testid="header-brand-tagline">Wealth management, portfolio guidance, and long-term financial planning</span>
             </div>
           </a>
 
