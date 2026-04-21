@@ -105,7 +105,7 @@ const sitePages = {
             <p data-testid="home-cta-text">If you are ready to discuss your goals, our consultation pathway is designed to begin with clarity and professionalism.</p>
             <div class="cta-actions">
               <a class="button" href="${consultationMailto}" data-testid="home-cta-email-button">Email Us</a>
-              <a class="button-outline" href="/book" data-testid="home-cta-book-button">View Consultation Page</a>
+              <a class="button-outline" href="/book" data-testid="home-cta-book-button">Schedule a Consultation</a>
             </div>
           </div>
         </div>
