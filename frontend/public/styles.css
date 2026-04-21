@@ -1,0 +1,710 @@
+@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --navy: #0b1638;
+  --navy-soft: #1e3a8a;
+  --navy-muted: #213a73;
+  --grey-50: #f8fafc;
+  --grey-100: #e5e7eb;
+  --grey-200: #cbd5e1;
+  --grey-400: #64748b;
+  --grey-600: #334155;
+  --white: #ffffff;
+  --gold-soft: #d7c49a;
+  --shadow: 0 20px 60px rgba(11, 22, 56, 0.08);
+  --radius: 26px;
+  --container: min(1180px, calc(100vw - 2rem));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(30, 58, 138, 0.08), transparent 30%),
+    linear-gradient(180deg, #eef2f7 0%, #f8fafc 40%, #eef2f7 100%);
+  color: var(--grey-600);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.page-shell {
+  min-height: 100vh;
+}
+
+.container {
+  width: var(--container);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(248, 250, 252, 0.86);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(100, 116, 139, 0.16);
+}
+
+.header-inner {
+  width: var(--container);
+  margin: 0 auto;
+  min-height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  color: var(--navy);
+}
+
+.brand-mark {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(11, 22, 56, 0.08), rgba(255, 255, 255, 0.85));
+  border: 1px solid rgba(30, 58, 138, 0.12);
+  padding: 0.45rem;
+  box-shadow: var(--shadow);
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brand-copy strong,
+.footer-brand strong {
+  display: block;
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: 1.12rem;
+  letter-spacing: -0.03em;
+}
+
+.brand-copy span,
+.footer-brand span {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.9rem;
+  color: var(--grey-400);
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav-link {
+  position: relative;
+  padding: 0.45rem 0;
+  color: var(--navy);
+  font-size: 0.98rem;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.15rem;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: var(--navy-soft);
+  transition: transform 0.25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.menu-toggle {
+  display: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  border: 1px solid rgba(30, 58, 138, 0.16);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.menu-toggle span,
+.menu-toggle span::before,
+.menu-toggle span::after {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 999px;
+  margin: 0 auto;
+  position: relative;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.menu-toggle span::before,
+.menu-toggle span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.menu-toggle span::before {
+  top: -6px;
+}
+
+.menu-toggle span::after {
+  top: 6px;
+}
+
+.mobile-nav {
+  display: none;
+  width: var(--container);
+  margin: 0 auto 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(100, 116, 139, 0.16);
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.mobile-nav.open {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.mobile-nav .nav-link {
+  padding: 0.75rem 0.5rem;
+}
+
+.button,
+.button-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 50px;
+  padding: 0 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.button {
+  color: var(--white);
+  background: linear-gradient(135deg, var(--navy-soft), var(--navy));
+  box-shadow: 0 18px 35px rgba(30, 58, 138, 0.22);
+}
+
+.button-outline {
+  color: var(--navy);
+  border: 1px solid rgba(30, 58, 138, 0.22);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.button:hover,
+.button-outline:hover,
+.menu-toggle:hover,
+.nav-link:hover {
+  transform: translateY(-2px);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 0 4.5rem;
+}
+
+.hero-grid,
+.story-grid,
+.contact-grid,
+.book-grid,
+.process-grid,
+.insights-grid,
+.services-grid,
+.values-grid,
+.detail-grid,
+.highlights-grid,
+.pillars-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hero-grid,
+.story-grid,
+.contact-grid,
+.book-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: var(--navy-soft);
+  margin-bottom: 1rem;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 42px;
+  height: 1px;
+  background: rgba(30, 58, 138, 0.4);
+}
+
+.hero-copy,
+.panel,
+.story-card,
+.service-card,
+.value-card,
+.detail-card,
+.insight-card,
+.contact-card,
+.book-card,
+.cta-banner {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+}
+
+.hero-copy {
+  padding: 3rem;
+}
+
+.hero-copy h1,
+.page-header h1,
+.cta-banner h2 {
+  margin: 0;
+  font-family: 'Cabinet Grotesk', sans-serif;
+  color: var(--navy);
+  letter-spacing: -0.05em;
+  line-height: 0.96;
+}
+
+.hero-copy h1 {
+  font-size: clamp(3rem, 6vw, 5.7rem);
+}
+
+.hero-copy p,
+.page-header p,
+.story-card p,
+.service-card p,
+.value-card p,
+.insight-card p,
+.contact-card p,
+.book-card p,
+.detail-card p,
+.cta-banner p {
+  font-size: 1.03rem;
+  line-height: 1.8;
+  color: var(--grey-600);
+}
+
+.hero-actions,
+.cta-actions,
+.detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.hero-image,
+.story-image,
+.page-art {
+  min-height: 420px;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hero-image img,
+.story-image img,
+.page-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-image::after,
+.story-image::after,
+.page-art::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 22, 56, 0.08), rgba(11, 22, 56, 0.35));
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(30, 58, 138, 0.08);
+  border: 1px solid rgba(30, 58, 138, 0.08);
+  color: var(--navy);
+  font-size: 0.92rem;
+}
+
+.hero-badge img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 4rem auto 0;
+}
+
+.stat-card,
+.panel {
+  padding: 1.5rem;
+}
+
+.stat-card strong,
+.metric {
+  display: block;
+  font-family: 'Cabinet Grotesk', sans-serif;
+  color: var(--navy);
+  font-size: 1.75rem;
+  letter-spacing: -0.04em;
+}
+
+.section {
+  padding: 5.5rem 0;
+}
+
+.section-muted {
+  background: linear-gradient(180deg, rgba(226, 232, 240, 0.55), rgba(248, 250, 252, 0.2));
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.section-heading {
+  max-width: 670px;
+  margin-bottom: 2.4rem;
+}
+
+.section-heading h2,
+.page-header h1 {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: clamp(2.4rem, 4vw, 4.2rem);
+  color: var(--navy);
+  letter-spacing: -0.05em;
+  margin: 0.35rem 0 0;
+}
+
+.services-grid,
+.values-grid,
+.insights-grid,
+.highlights-grid,
+.pillars-grid,
+.detail-grid,
+.process-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.service-card,
+.value-card,
+.insight-card,
+.detail-card,
+.book-card,
+.contact-card,
+.story-card,
+.cta-banner {
+  padding: 2rem;
+}
+
+.service-card {
+  min-height: 260px;
+}
+
+.card-label,
+.value-number,
+.small-label {
+  display: inline-flex;
+  margin-bottom: 1.1rem;
+  color: var(--navy-soft);
+  font-weight: 600;
+}
+
+.service-card h3,
+.value-card h3,
+.insight-card h3,
+.detail-card h3,
+.book-card h3,
+.contact-card h3,
+.story-card h2 {
+  margin: 0 0 0.9rem;
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: 1.5rem;
+  color: var(--navy);
+  letter-spacing: -0.04em;
+}
+
+.story-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.value-number {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: -0.03em;
+}
+
+.page-header {
+  padding: 4.5rem 0 2rem;
+}
+
+.page-art {
+  min-height: 500px;
+}
+
+.page-layout-gap {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.detail-card ul,
+.book-card ul,
+.contact-card ul {
+  padding-left: 1.1rem;
+  margin: 0;
+}
+
+.detail-card li,
+.book-card li,
+.contact-card li {
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+}
+
+.cta-banner {
+  display: grid;
+  gap: 1rem;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 100%);
+}
+
+.cta-banner h2,
+.cta-banner p,
+.cta-banner .eyebrow {
+  color: var(--white);
+}
+
+.cta-banner .eyebrow::before {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.cta-banner .button-outline {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.34);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.site-footer {
+  margin-top: 4rem;
+  background: var(--navy);
+  color: rgba(255, 255, 255, 0.78);
+  padding: 4rem 0 2.4rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.footer-brand img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem;
+}
+
+.footer-links,
+.footer-contact {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.footer-links a,
+.footer-contact a {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.footer-meta {
+  margin-top: 2.25rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.topline {
+  background: var(--navy);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.84rem;
+}
+
+.topline .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1.4rem;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+}
+
+.signature-text {
+  color: var(--gold-soft);
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .desktop-nav,
+  .header-actions .button {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-grid,
+  .story-grid,
+  .contact-grid,
+  .book-grid,
+  .footer-grid,
+  .services-grid,
+  .values-grid,
+  .insights-grid,
+  .highlights-grid,
+  .pillars-grid,
+  .detail-grid,
+  .process-grid,
+  .stats-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .header-inner {
+    min-height: 78px;
+  }
+
+  .brand-mark {
+    width: 50px;
+    height: 50px;
+  }
+
+  .hero,
+  .section,
+  .page-header {
+    padding-top: 4.25rem;
+  }
+
+  .hero-copy,
+  .story-card,
+  .service-card,
+  .value-card,
+  .detail-card,
+  .contact-card,
+  .book-card,
+  .cta-banner {
+    padding: 1.5rem;
+  }
+
+  .hero-grid,
+  .story-grid,
+  .contact-grid,
+  .book-grid,
+  .services-grid,
+  .values-grid,
+  .insights-grid,
+  .highlights-grid,
+  .pillars-grid,
+  .detail-grid,
+  .process-grid,
+  .stats-row,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
