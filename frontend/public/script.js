@@ -272,7 +272,6 @@ const sitePages = {
               <li data-testid="contact-email-item"><strong>Email:</strong> <a href="mailto:info@cpglobalinvestors.capital" data-testid="contact-email-link">info@cpglobalinvestors.capital</a></li>
               <li data-testid="contact-phone-item"><strong>Phone:</strong> <a href="${phoneHref}" data-testid="contact-phone-link">${phoneDisplay}</a></li>
               <li data-testid="contact-location-item"><strong>Location:</strong> <span data-testid="contact-location-text">Fresno, CA 93722</span></li>
-              <li data-testid="contact-registration-item"><strong>Reg. No:</strong> <span data-testid="contact-registration-text">202204211064</span></li>
             </ul>
             <div class="detail-actions">
               <a class="button" href="mailto:info@cpglobalinvestors.capital?subject=General%20Inquiry" data-testid="contact-email-button">Send an Email</a>
@@ -335,10 +334,10 @@ const sitePages = {
               <h3 data-testid="book-detail-response-heading">Professional outreach</h3>
               <p data-testid="book-detail-response-text">We recommend using a direct, concise email with enough context to shape a productive first conversation.</p>
             </article>
-            <article class="detail-card" data-testid="book-detail-registration-card">
-              <span class="small-label" data-testid="book-detail-registration-label">Registration</span>
-              <h3 data-testid="book-detail-registration-heading">Registered business profile</h3>
-              <p data-testid="book-detail-registration-text">Reg. No: 202204211064</p>
+            <article class="detail-card" data-testid="book-detail-contact-card">
+              <span class="small-label" data-testid="book-detail-contact-label">Contact</span>
+              <h3 data-testid="book-detail-contact-heading">Direct connection</h3>
+              <p data-testid="book-detail-contact-text">Reach C&amp;P at info@cpglobalinvestors.capital or 805-253-2887 to begin a private consultation.</p>
             </article>
           </div>
         </div>
@@ -433,7 +432,6 @@ const renderLayout = (path) => {
               <a href="mailto:info@cpglobalinvestors.capital" data-testid="footer-email-link">info@cpglobalinvestors.capital</a>
               <a href="${phoneHref}" data-testid="footer-phone-link">${phoneDisplay}</a>
               <span data-testid="footer-location-text">Fresno, CA 93722</span>
-              <span data-testid="footer-registration-text">Reg. No: 202204211064</span>
             </div>
           </div>
           <div class="footer-meta">
