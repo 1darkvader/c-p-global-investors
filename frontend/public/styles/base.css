@@ -76,6 +76,7 @@ img {
 }
 
 .topline .container {
+  width: min(1420px, calc(100vw - 2.5rem));
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem 1.4rem;
