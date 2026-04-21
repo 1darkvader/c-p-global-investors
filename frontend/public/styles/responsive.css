@@ -1,0 +1,76 @@
+@media (max-width: 1024px) {
+  .desktop-nav,
+  .header-actions .button {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-grid,
+  .story-grid,
+  .contact-grid,
+  .book-grid,
+  .footer-grid,
+  .services-grid,
+  .values-grid,
+  .insights-grid,
+  .highlights-grid,
+  .pillars-grid,
+  .detail-grid,
+  .process-grid,
+  .stats-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .header-inner {
+    min-height: 78px;
+  }
+
+  .brand-mark {
+    width: 50px;
+    height: 50px;
+  }
+
+  .hero,
+  .section,
+  .page-header {
+    padding-top: 4.25rem;
+  }
+
+  .hero-copy,
+  .story-card,
+  .service-card,
+  .value-card,
+  .detail-card,
+  .contact-card,
+  .book-card,
+  .cta-banner {
+    padding: 1.5rem;
+  }
+
+  .hero-grid,
+  .story-grid,
+  .contact-grid,
+  .book-grid,
+  .services-grid,
+  .values-grid,
+  .insights-grid,
+  .highlights-grid,
+  .pillars-grid,
+  .detail-grid,
+  .process-grid,
+  .stats-row,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}

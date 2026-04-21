@@ -1,0 +1,249 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(248, 250, 252, 0.86);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(100, 116, 139, 0.16);
+}
+
+.header-inner {
+  width: var(--container);
+  margin: 0 auto;
+  min-height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  color: var(--navy);
+}
+
+.brand-mark {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(11, 22, 56, 0.08), rgba(255, 255, 255, 0.85));
+  border: 1px solid rgba(30, 58, 138, 0.12);
+  padding: 0.45rem;
+  box-shadow: var(--shadow);
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brand-copy strong,
+.footer-brand strong {
+  display: block;
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: 1.12rem;
+  letter-spacing: -0.03em;
+}
+
+.brand-copy span,
+.footer-brand span {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.9rem;
+  color: var(--grey-400);
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav-link {
+  position: relative;
+  padding: 0.45rem 0;
+  color: var(--navy);
+  font-size: 0.98rem;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.15rem;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: var(--navy-soft);
+  transition: transform 0.25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.menu-toggle {
+  display: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  border: 1px solid rgba(30, 58, 138, 0.16);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.menu-toggle span,
+.menu-toggle span::before,
+.menu-toggle span::after {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 999px;
+  margin: 0 auto;
+  position: relative;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.menu-toggle span::before,
+.menu-toggle span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.menu-toggle span::before {
+  top: -6px;
+}
+
+.menu-toggle span::after {
+  top: 6px;
+}
+
+.mobile-nav {
+  display: none;
+  width: var(--container);
+  margin: 0 auto 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(100, 116, 139, 0.16);
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.mobile-nav.open {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.mobile-nav .nav-link {
+  padding: 0.75rem 0.5rem;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 0 4.5rem;
+}
+
+.hero-grid,
+.story-grid,
+.contact-grid,
+.book-grid,
+.process-grid,
+.insights-grid,
+.services-grid,
+.values-grid,
+.detail-grid,
+.highlights-grid,
+.pillars-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hero-grid,
+.story-grid,
+.contact-grid,
+.book-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.section {
+  padding: 5.5rem 0;
+}
+
+.section-muted {
+  background: linear-gradient(180deg, rgba(226, 232, 240, 0.55), rgba(248, 250, 252, 0.2));
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.page-header {
+  padding: 4.5rem 0 2rem;
+}
+
+.page-layout-gap {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.site-footer {
+  margin-top: 4rem;
+  background: var(--navy);
+  color: rgba(255, 255, 255, 0.78);
+  padding: 4rem 0 2.4rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.footer-brand img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem;
+}
+
+.footer-links,
+.footer-contact {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.footer-links a,
+.footer-contact a {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.footer-meta {
+  margin-top: 2.25rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
