@@ -3,6 +3,8 @@ const heroImage = 'https://images.pexels.com/photos/12306417/pexels-photo-123064
 const aboutImage = 'https://images.pexels.com/photos/34746047/pexels-photo-34746047.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200';
 const consultingImage = 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200';
 const consultationMailto = 'mailto:info@cpglobalinvestors.capital?subject=Book%20a%20Consultation';
+const phoneDisplay = '805-253-2887';
+const phoneHref = 'tel:+18052532887';
 
 const sitePages = {
   '/': {
@@ -15,7 +17,7 @@ const sitePages = {
             <div class="hero-copy reveal" data-testid="home-hero-copy">
               <div class="hero-badge" data-testid="home-hero-badge">
                 <img src="${logoUrl}" alt="C&P Global Investors logo" data-testid="home-hero-logo" />
-                <span data-testid="home-hero-badge-text">Investment consulting and business advisory</span>
+                <span data-testid="home-hero-badge-text">Wealth management and capital advisory</span>
               </div>
               <div class="eyebrow" data-testid="home-hero-eyebrow">Trusted guidance</div>
               <h1 data-testid="home-hero-heading">Strategic capital advice for thoughtful growth.</h1>
@@ -195,7 +197,7 @@ const sitePages = {
           <div class="page-layout-gap reveal" data-testid="about-header-block">
             <div class="eyebrow" data-testid="about-header-eyebrow">About</div>
             <h1 data-testid="about-header-heading">Professional by design. Strategic by focus.</h1>
-            <p data-testid="about-header-description">C&amp;P Global Investors presents a refined consulting identity for clients seeking steady, professional perspective in investment and business matters.</p>
+            <p data-testid="about-header-description">C&amp;P Global Investors serves clients seeking steady, professional perspective in wealth management, capital planning, and long-term financial priorities.</p>
           </div>
           <div class="page-art reveal" data-testid="about-header-image-panel">
             <img src="${aboutImage}" alt="Modern glass building" data-testid="about-header-image" />
@@ -207,9 +209,9 @@ const sitePages = {
         <div class="container story-grid">
           <article class="story-card reveal" data-testid="about-story-card">
             <div class="eyebrow" data-testid="about-story-eyebrow">Our perspective</div>
-            <h2 data-testid="about-story-heading">Clarity, trust, and practical advisory communication.</h2>
-            <p data-testid="about-story-text-1">The C&amp;P Global Investors brand is built to communicate discretion, polish, and confidence. The website experience reflects a calm, authoritative tone aligned with financial and business consulting.</p>
-            <p data-testid="about-story-text-2">From the visual identity to the content structure, every element is organized to support credibility and help prospective clients understand the firm’s focus at a glance.</p>
+            <h2 data-testid="about-story-heading">Wealth management with discretion, structure, and long-term perspective.</h2>
+            <p data-testid="about-story-text-1">C&amp;P is positioned to serve clients who value a disciplined approach to wealth management, portfolio oversight, and capital planning. Its presentation is measured, polished, and designed to reflect confidence in long-range financial stewardship.</p>
+            <p data-testid="about-story-text-2">The experience is built to support credibility with a more private-wealth tone, helping prospective clients understand C&amp;P’s focus on thoughtful planning, professional guidance, and enduring client relationships.</p>
           </article>
           <div class="story-image reveal" data-testid="about-story-image-panel">
             <img src="${consultingImage}" alt="Consulting meeting" data-testid="about-story-image" />
@@ -257,7 +259,7 @@ const sitePages = {
         <div class="container page-layout-gap reveal" data-testid="contact-header-block">
           <div class="eyebrow" data-testid="contact-header-eyebrow">Contact</div>
           <h1 data-testid="contact-header-heading">Connect with C&amp;P Global Investors.</h1>
-          <p data-testid="contact-header-description">If you would like to discuss investment consulting or broader business advisory needs, we invite you to reach out by email.</p>
+          <p data-testid="contact-header-description">If you would like to discuss wealth management, capital advisory, or long-term financial planning, we invite you to reach out directly.</p>
         </div>
       </section>
 
@@ -268,11 +270,13 @@ const sitePages = {
             <h3 data-testid="contact-details-heading">Business information</h3>
             <ul data-testid="contact-details-list">
               <li data-testid="contact-email-item"><strong>Email:</strong> <a href="mailto:info@cpglobalinvestors.capital" data-testid="contact-email-link">info@cpglobalinvestors.capital</a></li>
+              <li data-testid="contact-phone-item"><strong>Phone:</strong> <a href="${phoneHref}" data-testid="contact-phone-link">${phoneDisplay}</a></li>
               <li data-testid="contact-location-item"><strong>Location:</strong> <span data-testid="contact-location-text">Fresno, CA 93722</span></li>
-              <li data-testid="contact-focus-item"><strong>Focus:</strong> <span data-testid="contact-focus-text">Investment consulting, financial services, and business consulting.</span></li>
+              <li data-testid="contact-registration-item"><strong>Reg. No:</strong> <span data-testid="contact-registration-text">202204211064</span></li>
             </ul>
             <div class="detail-actions">
               <a class="button" href="mailto:info@cpglobalinvestors.capital?subject=General%20Inquiry" data-testid="contact-email-button">Send an Email</a>
+              <a class="button-outline" href="${phoneHref}" data-testid="contact-phone-button">Call Us</a>
             </div>
           </article>
           <article class="contact-card reveal" data-testid="contact-availability-card">
@@ -331,10 +335,10 @@ const sitePages = {
               <h3 data-testid="book-detail-response-heading">Professional outreach</h3>
               <p data-testid="book-detail-response-text">We recommend using a direct, concise email with enough context to shape a productive first conversation.</p>
             </article>
-            <article class="detail-card" data-testid="book-detail-location-card">
-              <span class="small-label" data-testid="book-detail-location-label">Location</span>
-              <h3 data-testid="book-detail-location-heading">Based in Fresno</h3>
-              <p data-testid="book-detail-location-text">C&amp;P Global Investors is presented with contact visibility in Fresno, CA 93722.</p>
+            <article class="detail-card" data-testid="book-detail-registration-card">
+              <span class="small-label" data-testid="book-detail-registration-label">Registration</span>
+              <h3 data-testid="book-detail-registration-heading">Registered business profile</h3>
+              <p data-testid="book-detail-registration-text">Reg. No: 202204211064</p>
             </article>
           </div>
         </div>
@@ -345,9 +349,10 @@ const sitePages = {
           <div class="cta-banner reveal" data-testid="book-cta-banner">
             <div class="eyebrow" data-testid="book-cta-eyebrow">Consultation request</div>
             <h2 data-testid="book-cta-heading">Ready to begin? Send your consultation request by email.</h2>
-            <p data-testid="book-cta-text">Use the company email to share your name, topic of interest, and a brief description of your goals.</p>
+            <p data-testid="book-cta-text">Contact C&amp;P to arrange a private consultation around wealth management, portfolio guidance, or long-term financial planning.</p>
             <div class="cta-actions">
               <a class="button" href="${consultationMailto}" data-testid="book-cta-email-button">Email info@cpglobalinvestors.capital</a>
+              <a class="button-outline" href="${phoneHref}" data-testid="book-cta-phone-button">Call ${phoneDisplay}</a>
             </div>
           </div>
         </div>
@@ -365,8 +370,8 @@ const renderLayout = (path) => {
     <div class="page-shell">
       <div class="topline" data-testid="site-topline">
         <div class="container">
-          <span data-testid="topline-message">C&amp;P Global Investors — professional investment and business consulting</span>
-          <span class="signature-text" data-testid="topline-contact">info@cpglobalinvestors.capital · Fresno, CA 93722</span>
+          <span data-testid="topline-message">C&amp;P Global Investors — wealth management and capital advisory</span>
+          <span class="signature-text" data-testid="topline-contact">info@cpglobalinvestors.capital · ${phoneDisplay} · Fresno, CA 93722</span>
         </div>
       </div>
 
@@ -378,7 +383,7 @@ const renderLayout = (path) => {
             </div>
             <div class="brand-copy" data-testid="header-brand-copy">
               <strong data-testid="header-brand-name">C&amp;P Global Investors</strong>
-              <span data-testid="header-brand-tagline">Investment consulting and business advisory</span>
+              <span data-testid="header-brand-tagline">Wealth management, portfolio guidance, and long-term financial planning</span>
             </div>
           </a>
 
@@ -416,7 +421,7 @@ const renderLayout = (path) => {
               <img src="${logoUrl}" alt="C&P Global Investors logo" data-testid="footer-logo-image" />
               <div>
                 <strong data-testid="footer-brand-name">C&amp;P Global Investors</strong>
-                <span data-testid="footer-brand-description">Professional investment consulting, financial guidance, and business advisory support.</span>
+                <span data-testid="footer-brand-description">Wealth management, portfolio guidance, and long-term financial planning.</span>
               </div>
             </div>
             <div class="footer-links" data-testid="footer-navigation-links">
@@ -427,12 +432,13 @@ const renderLayout = (path) => {
             </div>
             <div class="footer-contact" data-testid="footer-contact-block">
               <a href="mailto:info@cpglobalinvestors.capital" data-testid="footer-email-link">info@cpglobalinvestors.capital</a>
+              <a href="${phoneHref}" data-testid="footer-phone-link">${phoneDisplay}</a>
               <span data-testid="footer-location-text">Fresno, CA 93722</span>
+              <span data-testid="footer-registration-text">Reg. No: 202204211064</span>
             </div>
           </div>
           <div class="footer-meta">
             <span data-testid="footer-copyright">© <span id="year"></span> C&amp;P Global Investors. All rights reserved.</span>
-            <span data-testid="footer-note">Built with a refined navy and grey presentation for a professional consulting identity.</span>
           </div>
         </div>
       </footer>

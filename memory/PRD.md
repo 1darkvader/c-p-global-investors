@@ -24,6 +24,8 @@
 - Location shown only as Fresno, CA 93722 per user request
 - Responsive mobile navigation and polished visual design with subtle motion
 - Backend endpoints: /api/health and /api/company-info
+- Added phone number 805-253-2887, registration number 202204211064, a text-initial favicon, and wealth-management-focused brand wording in the header/footer/top bar
+- Enlarged logo presentation across the site and refined the About, Contact, and Book Consultation copy based on user feedback
 
 ## Prioritized Backlog
 ### P0

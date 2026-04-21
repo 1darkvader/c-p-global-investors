@@ -25,9 +25,9 @@
 }
 
 .brand-mark {
-  width: 58px;
-  height: 58px;
-  border-radius: 18px;
+  width: 76px;
+  height: 76px;
+  border-radius: 24px;
   background: linear-gradient(145deg, rgba(11, 22, 56, 0.08), rgba(255, 255, 255, 0.85));
   border: 1px solid rgba(30, 58, 138, 0.12);
   padding: 0.45rem;
@@ -44,7 +44,7 @@
 .footer-brand strong {
   display: block;
   font-family: 'Cabinet Grotesk', sans-serif;
-  font-size: 1.12rem;
+  font-size: 1.22rem;
   letter-spacing: -0.03em;
 }
 
@@ -52,7 +52,7 @@
 .footer-brand span {
   display: block;
   margin-top: 0.2rem;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--grey-400);
 }
 
@@ -218,10 +218,10 @@
 }
 
 .footer-brand img {
-  width: 64px;
-  height: 64px;
+  width: 88px;
+  height: 88px;
   object-fit: contain;
-  border-radius: 20px;
+  border-radius: 24px;
   background: rgba(255, 255, 255, 0.9);
   padding: 0.5rem;
 }
